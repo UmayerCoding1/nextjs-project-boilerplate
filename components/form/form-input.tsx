@@ -4,7 +4,7 @@ import { FormInputProps } from './type';
 const FormInput = ({type: text, label}: FormInputProps) => {
     return (
         <div>
-            {label && <label>{label ? 'Label' : ''}</label>}
+            {label && <label className='dark:text-red-200'>{label ? 'Label' : ''}</label>}
             <input type={text} className='border' />
         </div>
     );

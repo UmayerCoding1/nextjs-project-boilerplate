@@ -10,14 +10,14 @@ const useTheme = () => {
     
   useEffect(() => {
     // Initial check from document
-    if (document.documentElement.classList.contains("dark")) {
+    if (document.documentElement.classList.toggle("dark")) {
       setTheme("dark");
       localStorage.setItem("theme", "dark");
     } else {
       setTheme("light");
       localStorage.setItem("theme", "light");
     }
-  }, [theme]);
+  }, []);
 
    const toggleTheme = () => {
     if (theme === "dark") {
